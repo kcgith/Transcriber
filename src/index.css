@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3, .bold {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Apply the animation to each word */
+.animated-word {
+  opacity: 0; /* Initially hidden */
+  background-clip: text;
+  color: white;
+  background: linear-gradient(to right, #dce5e9, #e0dbe4);
+  -webkit-background-clip: text;
+}
+
+.word-container span:nth-child(1) {
+  animation: fadeInUp 1s ease forwards 0.5s; /* 1st word, 0.5s delay */
+}
+
+.word-container span:nth-child(2) {
+  animation: fadeInUp 1s ease forwards 1.5s; /* 2nd word, 1.5s delay */
+}
+
+.word-container span:nth-child(3) {
+  animation: fadeInUp 1s ease forwards 2.5s; /* 3rd word, 2.5s delay */
+}
+
+/* Keyframes for the fadeInUp effect */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start 20px below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}

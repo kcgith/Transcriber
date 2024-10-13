@@ -30,6 +30,9 @@ h1,h2,h3, .bold {
 .word-container span:nth-child(3) {
   animation: fadeInUp 1s ease forwards 2.5s; /* 3rd word, 2.5s delay */
 }
+.word-container span:nth-child(4) {
+  animation: fadeInUp  1s ease forwards 3.5s; /* 4th word, 3.5s delay */
+}
 
 /* Keyframes for the fadeInUp effect */
 @keyframes fadeInUp {

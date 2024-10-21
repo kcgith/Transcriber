@@ -2,11 +2,11 @@ import React from 'react'
 
 import { useState, useRef, useEffect } from 'react'
 import MainPage from './Pages/MainPage'
-// import Header from './Pages/Header'
+import Header from './Pages/Header'
 import Information from './Pages/Information'
 import FileDisplay from './Pages/FileDisplay'
 import Transcribing from './Pages/Transcribing'
-// import { MessageTypes } from './utils/presets'
+import { MessageTypes } from './utils/presets'
 
 function App() {
   const [file, setFile] = useState(null)
@@ -71,22 +71,22 @@ function App() {
     if (!file && !audioStream) { return }
 
     let audio = await readAudioFrom(file ? file : audioStream)
-    const model_name = `openai/whisper-tiny.en`
+    const model_name = 'openai/whisper-tiny.en'
 
     worker.current.postMessage({
       type: MessageTypes.INFERENCE_REQUEST,
       audio,
-      model_name
+      model_name  
     })
   }
 
  return (
   <div className="flex flex-col md:flex-row h-screen">
         
-        <div className="w-full md:w-1/2 h-1/2 md:h-full  bg-gradient-to-r from-blue-700 via-darkblue-500 to-blue-100 flex items-center justify-center">
+        <div className="w-full md:w-1/2 h-1/2 md:h-full  bg-gradient-to-r from-blue-900 via-darkblue-500 to-blue-100 flex items-center justify-center">
           <div className="flex sm:h-1/2 flex-col word-container  space-y-4 text-6xl font-bold text-white">
             <span className="animated-word">Record.</span>
-            <span className="animated-word">Transcribe.</span>
+            <span className="animated-word !text-gray-700 bold ">Transcribe.</span>
             <span className="animated-word">Translate.</span>
             <span className='animated-word text-sm font-mono'>Record a chunk of audio or upload and convert to text</span>
           </div>
@@ -96,7 +96,7 @@ function App() {
         <div className="w-full md:w-1/2 h-1/2 md:h-full bg-white flex flex-col items-center justify-center">
           
             <section >
-            
+            <Header/>
             {output ? (
               <Information output={output} finished={finished}/>
             ) : loading ? (

@@ -21,7 +21,7 @@ export default function FileDisplay(props) {
             <h1 className='font-semibold text-2xl sm:text-4xl md:text-6xl'><span className='text-blue-400 bold'>AudioFile:</span></h1>
             <div className=' flex flex-col text-left my-4'>
                 {/* <h3 className='font-semibold'>Name</h3> */}
-                <p className='truncate'>{file ? file?.name : 'Custom audio'}</p>
+                <p className='truncate'>{file ? file.name : 'Custom audio'}</p>
             </div>
             <div className='flex flex-col mb-2'>
                 <audio ref={audioRef} className='w-full' controls>

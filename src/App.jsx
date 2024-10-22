@@ -83,7 +83,8 @@ function App() {
  return (
   <div className="flex flex-col md:flex-row h-screen">
         
-        <div className="w-full md:w-1/2 h-1/2 md:h-full  bg-gradient-to-r from-blue-900 via-darkblue-500 to-blue-100 flex items-center justify-center">
+        
+        <div className=" w-full md:w-1/2 h-1/2 md:h-full  bg-gradient-to-r from-blue-900 via-darkblue-500 to-blue-100 flex items-center justify-center">
           <div className="flex sm:h-1/2 flex-col word-container  space-y-4 text-6xl font-bold text-white">
             <span className="animated-word">Record.</span>
             <span className="animated-word !text-gray-700 bold ">Transcribe.</span>
@@ -93,7 +94,11 @@ function App() {
         </div>
     
         
-        <div className="w-full md:w-1/2 h-1/2 md:h-full bg-white flex flex-col items-center justify-center">
+        (<div className="w-full md:w-1/2 h-1/2 md:h-full bg-white flex flex-col items-center justify-center">
+
+          <a href="/" className='flex items-center gap-2 specialBtn px-3 py-2 rounded-lg text-blue-400'>
+                    <p>Record New</p>
+                    <i className="fa-solid fa-plus"></i> </a>
           
             <section >
             <Header/>

@@ -94,7 +94,7 @@ function App() {
         </div>
     
         
-        (<div className="w-full md:w-1/2 h-1/2 md:h-full bg-white flex flex-col items-center justify-center">
+        <div className="w-full md:w-1/2 h-1/2 md:h-full bg-white flex flex-col items-center justify-center">
 
           <a href="/" className='flex items-center gap-2 specialBtn px-3 py-2 rounded-lg text-blue-400'>
                     <p>Record New</p>

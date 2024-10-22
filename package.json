@@ -1,8 +1,8 @@
 {
   "name": "transcriber",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
-  "homepage": "https://kcgith.github.io/Transcriber/",
+  "homepage": "https://kcgith.github.io/Transcriber",
   "type": "module",
   "scripts": {
     "dev": "vite",
